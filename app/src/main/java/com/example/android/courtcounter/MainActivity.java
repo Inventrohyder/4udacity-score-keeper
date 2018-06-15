@@ -17,6 +17,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*
+     * Red Team is Team A.
+     * Blue Team is Team B.
+     */
+
+    /*
      * Increase the score of Team A by 3 points.
      */
     public void addThreeForTeamA(View view){
@@ -37,6 +42,14 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addOneForTeamA(View view){
         scoreTeamA = scoreTeamA + 1;
+        displayForTeamA(scoreTeamA);
+    }
+
+    /*
+     * Reduce the score of Team A by 1 point.
+     */
+    public void minusOneForTeamA(View view){
+        scoreTeamA -= 1;
         displayForTeamA(scoreTeamA);
     }
 
@@ -65,6 +78,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*
+     * Reduce the score of Team B by 1 point.
+     */
+    public void minusOneForTeamB(View view){
+        scoreTeamB -= 1;
+        displayForTeamB(scoreTeamB);
+    }
+
+    /*
      * Reset the scores to 0 points.
      */
     public void reset(View view){
@@ -78,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Team A.
      */
     public void displayForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
+        TextView scoreView = findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -86,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Team B.
      */
     public void displayForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+        TextView scoreView = findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
     }
 }

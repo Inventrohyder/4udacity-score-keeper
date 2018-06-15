@@ -3,6 +3,8 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Primary theme color of the app (sets background color of app bar) -->
         <item name="colorPrimary">#FF9800</item>
+        <!-- Secondary theme color of the app (sets background color of status bar) -->
+        <item name="colorPrimaryDark">#f57c00</item>
         <!-- Background color of buttons in the app -->
         <item name="colorButtonNormal">#FF9800</item>
     </style>
