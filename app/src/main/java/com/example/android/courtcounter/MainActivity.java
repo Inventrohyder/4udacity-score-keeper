@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
      * Blue Team is Team B.
      */
 
-    /*
+    /**
      * Increase the score of Team A by 3 points.
      */
     public void addThreeForTeamA(View view){
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamA(scoreTeamA);
     }
 
-    /*
+    /**
      * Increase the score of Team A by 2 points.
      */
     public void addTwoForTeamA(View view){
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamA(scoreTeamA);
     }
 
-    /*
+    /**
      * Increase the score of Team A by 1 point.
      */
     public void addOneForTeamA(View view){
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamA(scoreTeamA);
     }
 
-    /*
+    /**
      * Reduce the score of Team A by 1 point.
      */
     public void minusOneForTeamA(View view){
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamA(scoreTeamA);
     }
 
-    /*
+    /**
      * Increase the score of Team B by 3 points.
      */
     public void addThreeForTeamB(View view){
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamB(scoreTeamB);
     }
 
-    /*
+    /**
      * Increase the score of Team B by 2 points.
      */
     public void addTwoForTeamB(View view){
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamB(scoreTeamB);
     }
 
-    /*
+    /**
      * Increase the score of Team B by 1 point.
      */
     public void addOneForTeamB(View view){
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamB(scoreTeamB);
     }
 
-    /*
+    /**
      * Reduce the score of Team B by 1 point.
      */
     public void minusOneForTeamB(View view){
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamB(scoreTeamB);
     }
 
-    /*
+    /**
      * Reset the scores to 0 points.
      */
     public void reset(View view){
