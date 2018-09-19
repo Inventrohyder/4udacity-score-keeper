@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Tong IL Score Keeper</string>
+    <string name="app_name">Tong Il Moo Doo</string>
     <string name="red_team">Red Team</string>
     <string name="initial_score">0</string>
-    <string name="points_3">+3 points</string>
-    <string name="points_2">+2 points</string>
-    <string name="points_1">+1 point</string>
+    <string name="points_3">Aerial Kick</string>
+    <string name="points_2">Kick</string>
+    <string name="points_1">Punch</string>
     <string name="blue_team">Blue Team</string>
     <string name="reset">Reset</string>
-    <string name="points_1_down">-1 Point</string>
+    <string name="points_1_down">Penalty</string>
 </resources>
