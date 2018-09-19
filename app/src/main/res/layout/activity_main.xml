@@ -25,13 +25,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/team_red"
+                android:drawableStart="@drawable/team_red"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
                 android:text="@string/red_team"
                 android:textColor="#F44336"
                 android:textSize="19sp"
-                android:drawableStart="@drawable/team_red"
-                android:drawableLeft="@drawable/team_red"
                 tools:ignore="UnusedAttribute" />
 
             <TextView
@@ -78,6 +78,16 @@
                 android:layout_marginTop="8dp"
                 android:onClick="minusOneForTeamA"
                 android:text="@string/points_1_down" />
+
+            <TextView
+                android:id="@+id/team_a_fouls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:padding="8dp"
+                android:text="@string/initial_score"
+                android:textAppearance="?android:textAppearanceLarge" />
+
         </LinearLayout>
 
         <View
@@ -100,13 +110,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/team_blue"
+                android:drawableStart="@drawable/team_blue"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
                 android:text="@string/blue_team"
                 android:textColor="#2196F3"
                 android:textSize="19sp"
-                android:drawableStart="@drawable/team_blue"
-                android:drawableLeft="@drawable/team_blue"
                 tools:ignore="UnusedAttribute" />
 
             <TextView
@@ -153,6 +163,16 @@
                 android:layout_marginTop="8dp"
                 android:onClick="minusOneForTeamB"
                 android:text="@string/points_1_down" />
+
+            <TextView
+                android:id="@+id/team_b_fouls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="8dp"
+                android:text="@string/initial_score"
+                android:textAppearance="?android:textAppearanceLarge" />
+
         </LinearLayout>
     </LinearLayout>
 
@@ -161,8 +181,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="reset"
         android:layout_marginBottom="32dp"
+        android:onClick="reset"
         android:text="@string/reset" />
 
 </RelativeLayout>
