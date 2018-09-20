@@ -1,7 +1,7 @@
 package com.example.android.courtcounter;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
@@ -9,6 +9,8 @@ public class MainActivity extends AppCompatActivity {
 
     int scoreTeamA = 0;
     int scoreTeamB = 0;
+    int penaltiesTeamA = 0;
+    int penaltiesTeamB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addThreeForTeamA(View view){
         scoreTeamA = scoreTeamA + 3;
-        displayForTeamA(scoreTeamA);
+        display(scoreTeamA, R.id.team_a_score);
     }
 
     /**
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addTwoForTeamA(View view){
         scoreTeamA = scoreTeamA + 2;
-        displayForTeamA(scoreTeamA);
+        display(scoreTeamA, R.id.team_a_score);
     }
 
     /**
@@ -42,15 +44,18 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addOneForTeamA(View view){
         scoreTeamA = scoreTeamA + 1;
-        displayForTeamA(scoreTeamA);
+        display(scoreTeamA, R.id.team_a_score);
     }
 
     /**
      * Reduce the score of Team A by 1 point.
+     * Increase the number of penalties that Team A has committed.
      */
     public void minusOneForTeamA(View view){
         scoreTeamA -= 1;
-        displayForTeamA(scoreTeamA);
+        penaltiesTeamA += 1;
+        display(scoreTeamA, R.id.team_a_score);
+        display(penaltiesTeamA, R.id.team_a_fouls);
     }
 
     /**
@@ -58,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addThreeForTeamB(View view){
         scoreTeamB = scoreTeamB + 3;
-        displayForTeamB(scoreTeamB);
+        display(scoreTeamB, R.id.team_b_score);
     }
 
     /**
@@ -66,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addTwoForTeamB(View view){
         scoreTeamB = scoreTeamB + 2;
-        displayForTeamB(scoreTeamB);
+        display(scoreTeamB, R.id.team_b_score);
     }
 
     /**
@@ -74,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addOneForTeamB(View view){
         scoreTeamB = scoreTeamB + 1;
-        displayForTeamB(scoreTeamB);
+        display(scoreTeamB, R.id.team_b_score);
     }
 
     /**
@@ -82,7 +87,9 @@ public class MainActivity extends AppCompatActivity {
      */
     public void minusOneForTeamB(View view){
         scoreTeamB -= 1;
-        displayForTeamB(scoreTeamB);
+        penaltiesTeamB += 1;
+        display(scoreTeamB, R.id.team_b_score);
+        display(penaltiesTeamB, R.id.team_b_fouls);
     }
 
     /**
@@ -91,24 +98,20 @@ public class MainActivity extends AppCompatActivity {
     public void reset(View view){
         scoreTeamA = 0;
         scoreTeamB = 0;
-        displayForTeamA(scoreTeamA);
-        displayForTeamB(scoreTeamB);
+        penaltiesTeamA = 0;
+        penaltiesTeamB = 0;
+        display(scoreTeamA, R.id.team_a_score);
+        display(scoreTeamB, R.id.team_b_score);
+        display(penaltiesTeamA, R.id.team_a_fouls);
+        display(penaltiesTeamB, R.id.team_b_fouls);
     }
 
     /**
-     * Displays the given score for Team A.
+     * Displays the given number for the given Team.
      */
-    public void displayForTeamA(int score) {
-        TextView scoreView = findViewById(R.id.team_a_score);
-        scoreView.setText(String.valueOf(score));
-    }
-
-    /**
-     * Displays the given score for Team B.
-     */
-    public void displayForTeamB(int score) {
-        TextView scoreView = findViewById(R.id.team_b_score);
-        scoreView.setText(String.valueOf(score));
+    public void display(int score, int id) {
+        TextView textView = findViewById(id);
+        textView.setText(String.valueOf(score));
     }
 }
 
